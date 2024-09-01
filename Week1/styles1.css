@@ -1,0 +1,127 @@
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #9c6ddc, #6a4f9a); /* Softer gradient between purple and blue */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.search-container {
+    display: flex;
+    align-items: center;
+}
+
+input[type="text"]::placeholder {
+    color: #800080; /* Set placeholder text color to purple (onionish) */
+}
+
+.dropdown {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.dropbtn {
+    background-color: #800080; /* Purple (onionish) */
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 24px; /* Rounded corners on all sides */
+    margin-right: -1px; /* Remove gap between button and search input */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease; /* Smooth transitions */
+}
+
+.dropbtn:hover {
+    background-color: #993399; /* Slightly lighter shade for hover effect */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
+    transform: scale(1.05); /* Slightly enlarge button on hover */
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: rgba(249, 249, 249, 0.9); /* Slightly less transparent */
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    top: 100%; /* Align dropdown with the bottom of the button */
+    left: 0; /* Align dropdown with the left of the button */
+    border-radius: 24px; /* Rounded corners on all sides */
+    min-width: 200px; /* Ensure a minimum width */
+    margin-top: 8px; /* Added gap between button and dropdown */
+    opacity: 0; /* Start hidden */
+    transition: opacity 0.3s ease, transform 0.3s ease; /* Smooth transitions */
+    transform: translateY(10px); /* Initial position for animation */
+}
+
+.dropdown-content.show {
+    display: block;
+    opacity: 1; /* Fully visible */
+    transform: translateY(0); /* Move to final position */
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    border-radius: 24px; /* Rounded corners for links */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth hover transition */
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+    transform: translateX(5px); /* Slightly move link on hover */
+}
+
+.search-input-container {
+    display: flex;
+    align-items: center;
+}
+
+input[type="text"] {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 24px 0 0 24px; /* Rounded corners on the left */
+    outline: none;
+    width: 300px;
+    margin-right: 0; /* Remove margin to align with button */
+    border-right: none; /* Remove the right border to merge with button */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for border color */
+}
+
+input[type="text"]:focus {
+    border-color: #800080; /* Purple (onionish) border on focus */
+    box-shadow: 0 0 8px rgba(128, 0, 128, 0.3); /* Subtle glow effect */
+    transform: scale(1.02); /* Slightly enlarge input on focus */
+}
+
+#searchBtn {
+    background-color: #800080; /* Match the dropdown button color */
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 0 24px 24px 0; /* Rounded corners on the right */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-left: 1px solid #ccc; /* Border to separate from the input box */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease; /* Smooth transitions */
+}
+
+#searchBtn:hover {
+    background-color: #993399; /* Slightly lighter shade for hover effect */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
+    transform: scale(1.05); /* Slightly enlarge button on hover */
+}
+
+#searchBtn img.search-icon {
+    width: 20px;
+    height: 20px;
+}

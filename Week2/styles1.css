@@ -1,0 +1,204 @@
+/* Global Styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    background-color: #1a1a1a; /* Darker background for a modern look */
+    color: #e0e0e0; /* Lighter text color for better contrast */
+    height: 100%;
+    overflow: hidden;
+}
+
+/* Slider Container */
+.slider {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 85vw; /* Maintain width of the slider */
+    height: 85vh; /* Maintain height of the slider */
+    max-width: 1300px;
+    max-height: 900px;
+    overflow: hidden;
+    background: #000;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+    border-radius: 24px;
+    position: relative;
+}
+
+/* Slide Images */
+.slides {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.slides img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+    border-radius: 24px;
+}
+
+.slides img.previous, 
+.slides img.next {
+    opacity: 0.5; /* Dimmed effect for adjacent images */
+    transform: scale(0.9); /* Slightly smaller scale for adjacent images */
+    z-index: 1; /* Lower z-index for background images */
+}
+
+.slides img.active {
+    opacity: 1;
+    transform: scale(1.1); /* Slight zoom effect for the active image */
+    z-index: 2; /* Higher z-index for the active image */
+    animation: rotateAndSlide 1s ease-in-out; /* Adjust duration and iteration */
+}
+
+@keyframes rotateAndSlide {
+    0% {
+        transform: translate(-50%, -50%) rotate(-360deg);
+        opacity: 0;
+    }
+    50% {
+        transform: translate(-50%, -50%) rotate(0deg);
+        opacity: 1;
+    }
+    100% {
+        transform: translate(-50%, -50%) rotate(360deg);
+        opacity: 1;
+    }
+}
+
+/* Controls */
+.controls {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+    z-index: 10;
+}
+
+.controls button {
+    background-color: rgba(0, 0, 0, 0.5); /* Slightly transparent background */
+    border: none;
+    color: #fff;
+    padding: 12px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 50%;
+    outline: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); /* Soft shadow for depth */
+}
+
+.controls button:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+    transform: scale(1.15); /* Slightly larger scale on hover */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4); /* Enhanced shadow on hover */
+}
+
+/* Side Arrows */
+.controls .prev::before, 
+.controls .next::before {
+    content: '';
+    display: inline-block;
+    border: solid #fff;
+    border-width: 0 6px 6px 0;
+    padding: 10px;
+}
+
+.controls .prev::before {
+    transform: rotate(135deg);
+}
+
+.controls .next::before {
+    transform: rotate(-45deg);
+}
+
+/* Thumbnails */
+.thumbnails {
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+    position: relative;
+    z-index: 10;
+}
+
+.thumbnails img {
+    width: 90px;
+    height: 70px;
+    margin: 0 7px;
+    cursor: pointer;
+    opacity: 0.8;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    border-radius: 12px;
+    border: 2px solid transparent;
+}
+
+.thumbnails img.active, 
+.thumbnails img:hover {
+    opacity: 1;
+    transform: scale(1.15);
+    border-color: #64b5f6; /* Highlight color */
+}
+
+/* Caption */
+.caption {
+    text-align: center;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.7); /* Slightly darker background for better readability */
+    color: #fff;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    box-sizing: border-box;
+    z-index: 10;
+    backdrop-filter: blur(10px); /* Enhanced blur effect */
+    border-radius: 0 0 24px 24px; /* Rounded corners for caption */
+    transition: background-color 0.3s ease;
+}
+
+.caption h2 {
+    margin: 0;
+    font-size: 1.6rem; /* Larger font size for better visibility */
+    font-weight: 700;
+    transition: color 0.3s ease;
+}
+
+.caption p {
+    margin: 5px 0 0;
+    font-size: 1.2rem; /* Larger font size for better readability */
+    transition: color 0.3s ease;
+}
+
+.caption:hover {
+    background-color: rgba(0, 0, 0, 0.9); /* Darker background on hover */
+}
+
+/* Responsive Design */
+@media only screen and (max-width: 600px) {
+    .slider {
+        width: 95vw;
+        height: 80vh;
+    }
+    .controls button {
+        padding: 10px;
+    }
+    .thumbnails img {
+        width: 60px;
+        height: 45px;
+    }
+    .caption h2 {
+        font-size: 1.4rem; /* Adjusted font size */
+    }
+    .caption p {
+        font-size: 1rem; /* Adjusted font size */
+    }
+}
