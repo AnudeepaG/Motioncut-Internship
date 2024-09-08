@@ -1,16 +1,33 @@
-<h1>Week1-Project1</h1>
-<h2>Search Interface 🕵️‍♀️🔍</h2>
+<h1>Week 1 - Project 1: Search Interface 🕵️‍♀️🔍</h1>
 <h3>Objective 🎯</h3>
-<p>Develop a sleek and functional search interface using HTML and CSS. The interface will feature a dropdown menu for category selection and a search input field for user queries.</p>
+<p>
+  Develop a sleek, functional search interface using HTML and CSS, featuring a dropdown menu for category selection and a search input field for user queries.
+</p>
+<h3>Live Demo 🌐</h3>
+<p>
+  <a href="https://anudeepag.github.io/MotionCut-Internship-Week1/">View Project</a>
+</p>
 
-<h2>Live Demo 🌐</h2>
-<p><a href="https://anudeepag.github.io/MotionCut-Internship-Week1/">https://anudeepag.github.io/MotionCut-Internship-Week1/</a></p>
+<hr>
 
-<h1>Week 3 - Project 1</h1>
-<h2>E-commerce Landing Page 🛒✨</h2>
-<h3>Project Objective 🎯</h3>
-<p>This project aims to create a visually appealing e-commerce landing page showcasing product images, descriptions, prices, and an "Add to Cart" button, ensuring a seamless, user-friendly shopping experience for customers.</p>
+<h1>Week 2 - Project 1: Dynamic Image Slider 🖼️</h1>
+<h3>Objective 🎯</h3>
+<p>
+  Create a fully responsive image slider with smooth transitions and manual navigation controls, optimized for desktop and mobile screens.
+</p>
+<h3>Live Demo 🌐</h3>
+<p>
+  <a href="https://anudeepag.github.io/motioncut-week2/">View Project</a>
+</p>
 
-<h2>Live Demo 🌐</h2>
-<p>You can view the deployed project here: 
-  <a href="https://anudeepag.github.io/motioncut-week3/">https://anudeepag.github.io/motioncut-week3/</a></p>
+<hr>
+
+<h1>Week 3 - Project 1: E-commerce Landing Page 🛒✨</h1>
+<h3>Objective 🎯</h3>
+<p>
+  Design a user-friendly, visually appealing e-commerce landing page showcasing product images, descriptions, prices, and an "Add to Cart" button for a seamless shopping experience.
+</p>
+<h3>Live Demo 🌐</h3>
+<p>
+  <a href="https://anudeepag.github.io/motioncut-week3/">View Project</a>
+</p>
